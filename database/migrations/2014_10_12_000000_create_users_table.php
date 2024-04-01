@@ -19,6 +19,10 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->date('Birthday')->nullable(); // Ngày sinh
+            $table->string('Picture', 512)->nullable(); // Ảnh đại diện
+            $table->integer('AccountType'); // Loại tài khoản
+            $table->integer('AccountStatus'); // Trạng thái
         });
     }
 
