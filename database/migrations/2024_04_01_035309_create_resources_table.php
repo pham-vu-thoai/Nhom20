@@ -17,7 +17,7 @@ class CreateResourcesTable extends Migration
             $table->string('ResourceUrl', 512)->nullable(false); // Url của tài nguyên
             $table->integer('ResourceType'); // Loại tài nguyên
             $table->uuid('AccountId'); // Mã tài khoản tạo
-            $table->foreign('AccountId')->references('AccountId')->on('accounts');
+            $table->foreign('AccountId')->references('id')->on('users');
             $table->timestamps();
         });
     }
